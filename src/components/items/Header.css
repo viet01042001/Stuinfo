@@ -1,0 +1,51 @@
+.form-control {
+  margin: 0 auto;
+}
+
+.theme {
+  background-color: #1f8ddb;
+}
+
+.text-light {
+  color: white;
+}
+
+.navbar {
+  padding-top: 0;
+  padding-right: 1rem;
+  padding-bottom: 0;
+  padding-left: 1rem;
+}
+
+.navbar-text {
+  -webkit-transition: color 0.2s;
+  transition: color 0.1s;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+.navbar-text:hover {
+    color: #0014a8;
+}
+.navbar-text-hcmut {
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.nav-item {
+  margin-right: 10px;
+}
+
+.header {
+    position: relative;
+}
+.title-hcmut {
+    position: absolute;
+    right: 0;
+}
+
+.button-logout {
+    margin-left: 20px;
+    margin-right: 10px;
+}
