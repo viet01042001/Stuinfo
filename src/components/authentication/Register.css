@@ -1,4 +1,4 @@
-.login {
+.register {
     box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
     margin-left: 100px;
     margin-right: 100px;
@@ -6,13 +6,9 @@
     padding-bottom: 50px;
 }
 
-.login-email {
+.register-email {
     margin-bottom: 50px;
 }
-.login-password {
-    margin-bottom: 50px;
-}
-
-.or-register {
-    margin-top: 50px;
+.register-password {
+    margin-bottom: 150px;
 }

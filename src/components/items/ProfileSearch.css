@@ -1,0 +1,24 @@
+ul {
+    list-style-type: none;
+    padding-left: 0!important;
+    margin-bottom: 0!important;
+}
+li {
+    margin: 10px;
+}
+
+.row {
+    width: 100%;
+}
+
+.item-result {
+    margin: 10px;
+}
+
+.profile-search {
+    padding: 15px;
+}
+
+button {
+    width: 100%;
+}

@@ -30,14 +30,6 @@ function Header() {
             <Link to="/contact" class="nav-link"> <h6 class="navbar-text"> | Contact</h6> </Link>
           </li>
 
-          <li class="nav-item active" id="contact-navigate">
-            <a href="http://e-learning.hcmut.edu.vn/" class="nav-link"> <h6 class="navbar-text"> | BKeL</h6> </a>
-          </li>
-          
-          <li class="nav-item active" id="contact-navigate">
-            <a href="https://mybk.hcmut.edu.vn/" class="nav-link"> <h6 class="navbar-text"> | MyBK </h6> </a>
-          </li>
-
         </ul>
         
         <form class="title-hcmut">

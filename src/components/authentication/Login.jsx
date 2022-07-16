@@ -6,6 +6,8 @@ import { auth } from '../connect_firebase/firebaseAuthentication';
 
 import { useNavigate  } from 'react-router-dom';
 
+import Register from './Register'
+
 export default function Login() {
 
     const [LoginEmail,      setLoginEmail]      = useState("");
@@ -37,6 +39,10 @@ export default function Login() {
         </div>
 
         <button type="button" class="btn btn-outline-primary" onClick={login}> Login </button>
+
+        <div className="col-12 or-register">
+            <h6> or register ? </h6>
+        </div>
 
     </div>
     );
