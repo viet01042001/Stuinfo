@@ -1,4 +1,5 @@
-import Header from '../items/Header';
+import Header from '../items/Header'
+import Footer from '../items/Footer'
 import './InfoStudent.css';
 
 import {useState} from 'react'
@@ -9,8 +10,8 @@ import ProfileSearch from '../items/ProfileSearch'
 
 function InfoStudent() {
 
-    const [ProfileShow, setProfileShow] = useState([]);
-    
+    const [ProfileShow, setProfileShow] = useState({});
+
   return(
     <div class="infostudent-page">
       
@@ -22,35 +23,27 @@ function InfoStudent() {
         
         <div class="infostudent">
 
-          <div class="box-1 col-3">
-            <ProfileSearch get={setProfileShow}/>
+          <div class="box-1 col-3 search-manage-box">
+            <ProfileSearch getProfile={setProfileShow}/>
           </div>
 
-          <div class="box-2">
+          <div class="box-2 info-manage-box">
             
-            <div class="col-8 infoform">
+            <div class="col-12 infoform">
               
-              <InfoForm set={ProfileShow} />
+              <InfoForm setProfile={ProfileShow} />
               
             </div>
-
-            <div class="col-4">
-                {/*
-                <div class="col-12 box-summary-1">
-                    <Image class="logohcmut" src={require("../../images/LogoHCMUT.png")} alt="LogoHCMUT" height="200px" />
-                </div>
-                */}
-                
-
-                <div class="col-12 box-summary-2">
-                Part 2
-                </div>
-            </div>
+            
           </div>
           
         </div>
         
-      </div>      
+      </div>   
+
+      <div>
+        <Footer/>
+      </div>   
       
     </div>
   );

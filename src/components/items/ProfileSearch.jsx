@@ -1,7 +1,7 @@
 import './ProfileSearch.css'
 import { useState, useEffect } from 'react'
 
-import { collection, doc, getDocs, onSnapshot, updateDoc } from "firebase/firestore"; 
+import { collection, onSnapshot } from "firebase/firestore"; 
 import {db} from '../connect_firebase/firebaseDatabase'
 
 import './ProfileSearch.css';
@@ -21,21 +21,13 @@ export default function ProfileSearch(props) {
     const [SearchResult, setSearchResult] = useState(ListProfile);
 
     useEffect(
-        () => 
+        () => {
             onSnapshot(collection(db, "StuInfoMain"), 
                 (snapshot) => {
                     setListProfile(snapshot.docs.map(doc => doc.data()));
                 }
-            ), 
+            )}, 
         [])
-
-    useEffect(
-        () => {
-            const results = ListProfile.filter(
-                (item) => item.id.toLowerCase().includes(SearchKey)
-            );        
-            setSearchResult(results);
-    }, [SearchKey])
 
     useEffect(
         () => {
@@ -45,7 +37,7 @@ export default function ProfileSearch(props) {
             setSearchResult(results);
     }, [SearchKey])
 
-    
+
     return(
         <div className="row">
 
@@ -56,14 +48,18 @@ export default function ProfileSearch(props) {
             <hr/>
             
             <div className="row profile-result">
-
-                <ul> 
+                {SearchResult.length > 0 && (
+                    <ul className="search-ul"> 
                     {SearchResult.map(profile => (
-                        <li>
-                            <button type="button" class="btn btn-outline-info btn-block" onClick={props.get(profile)}> <ProfileCard student={profile} /> </button>
+                        <li className="search-li">
+                            <div>
+                                <button class="search-button btn btn-outline-primary btn-block profile" onClick={() => props.getProfile(profile)}> <ProfileCard student={profile} /> </button>
+                            </div>
                         </li>
                     ))} 
                 </ul>
+                )}
+                
 
             </div>
 

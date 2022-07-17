@@ -1,9 +1,9 @@
-ul {
+.search-ul {
     list-style-type: none;
     padding-left: 0!important;
     margin-bottom: 0!important;
 }
-li {
+.search-li {
     margin: 10px;
 }
 
@@ -19,6 +19,6 @@ li {
     padding: 15px;
 }
 
-button {
+.search-button {
     width: 100%;
 }

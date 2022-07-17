@@ -1,7 +1,23 @@
 import Header from '../items/Header';
+import Footer from '../items/Footer'
 import './Contact.css';
 
+
+
+
+
+import { useState, useEffect } from 'react'
+
+import { collection, onSnapshot } from "firebase/firestore"; 
+import {db} from '../connect_firebase/firebaseDatabase'
+
+
+
+
+
+
 const Contact = () => {
+
   return(
     <div class="contact-page">
 
@@ -18,7 +34,11 @@ const Contact = () => {
         </div>
         
       </div>
-      
+
+      <div>
+        <Footer/>
+      </div>
+
     </div>
   );
 }
