@@ -6,8 +6,6 @@ import 'bootstrap/dist/js/bootstrap.min.js';
 
 import MainPage from './components/page/MainPage'
 
-
-
 function App() {
   return (
     <div className="App">
@@ -15,8 +13,5 @@ function App() {
     </div>
   );
 }
-
-
-
 
 export default App;
